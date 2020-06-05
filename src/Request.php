@@ -67,9 +67,10 @@ class Request
      * */
     protected function signature(){
         if($this->type!='GET'){
-            $data=http_build_query($this->data, '', '&');
+            $data=http_build_query(array_merge($this->data,['nonce'=>$this->nonce]), '', '&');
             
             $sign = hash_hmac('sha512', $this->path . hash('sha256', $this->nonce . $data, true), base64_decode($this->secret), true);
+            
             $this->signature=base64_encode($sign);
         }
     }
@@ -117,6 +118,7 @@ class Request
         $url=$this->host.$this->path;
         
         if($this->type=='GET') $url.='?'.http_build_query($this->data);
+        else $this->options['body']=json_encode(array_merge($this->data, ['nonce'=>$this->nonce]));
         
         $response = $client->request($this->type, $url , $this->options);
         

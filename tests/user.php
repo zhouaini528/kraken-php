@@ -30,17 +30,10 @@ $kraken->setOptions([
 ]);
 
 try {
-    $result=$kraken->trade()->postAddOrder([
-        'pair' => 'XXBTZUSD',
-        'type' => 'buy',
-        'ordertype' => 'limit',
-        'price' => '5000',
-        'volume' => '1'
-    ]);
+    $result=$kraken->user()->balance();
     print_r($result);
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
-
 
 ?>

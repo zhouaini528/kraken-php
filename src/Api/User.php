@@ -14,7 +14,7 @@ class User extends Request
      * */
     public function balance(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/Balance ';
+        $this->path='/0/private/Balance';
         $this->data=$data;
         return $this->exec();
     }
@@ -24,7 +24,7 @@ class User extends Request
      * */
     public function tradeBalance(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/TradeBalance ';
+        $this->path='/0/private/TradeBalance';
         $this->data=$data;
         return $this->exec();
     }
@@ -44,7 +44,7 @@ class User extends Request
      * */
     public function closedOrders(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/ClosedOrders ';
+        $this->path='/0/private/ClosedOrders';
         $this->data=$data;
         return $this->exec();
     }
@@ -54,7 +54,7 @@ class User extends Request
      * */
     public function queryOrders(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/QueryOrders ';
+        $this->path='/0/private/QueryOrders';
         $this->data=$data;
         return $this->exec();
     }
@@ -74,7 +74,7 @@ class User extends Request
      * */
     public function queryTrades(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/QueryTrades ';
+        $this->path='/0/private/QueryTrades';
         $this->data=$data;
         return $this->exec();
     }
@@ -84,7 +84,7 @@ class User extends Request
      * */
     public function openPositions(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/OpenPositions ';
+        $this->path='/0/private/OpenPositions';
         $this->data=$data;
         return $this->exec();
     }
@@ -94,7 +94,7 @@ class User extends Request
      * */
     public function ledgers(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/Ledgers ';
+        $this->path='/0/private/Ledgers';
         $this->data=$data;
         return $this->exec();
     }
@@ -114,7 +114,7 @@ class User extends Request
      * */
     public function tradeVolume(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/TradeVolume ';
+        $this->path='/0/private/TradeVolume';
         $this->data=$data;
         return $this->exec();
     }
@@ -124,7 +124,7 @@ class User extends Request
      * */
     public function addExport(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/AddExport ';
+        $this->path='/0/private/AddExport';
         $this->data=$data;
         return $this->exec();
     }
@@ -144,7 +144,7 @@ class User extends Request
      * */
     public function retrieveExport(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/RetrieveExport ';
+        $this->path='/0/private/RetrieveExport';
         $this->data=$data;
         return $this->exec();
     }
@@ -154,7 +154,7 @@ class User extends Request
      * */
     public function removeExport(array $data=[]){
         $this->type='POST';
-        $this->path='/0/private/RemoveExport ';
+        $this->path='/0/private/RemoveExport';
         $this->data=$data;
         return $this->exec();
     }

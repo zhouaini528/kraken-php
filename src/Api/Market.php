@@ -84,7 +84,7 @@ class Market extends Request
      * */
     public function spread(array $data=[]){
         $this->type='GET';
-        $this->path='/0/public/Spread ';
+        $this->path='/0/public/Spread';
         $this->data=$data;
         return $this->exec();
     }
