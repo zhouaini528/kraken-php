@@ -30,29 +30,29 @@ $kraken->setOptions([
 ]);
 
 try {
-    $result=$kraken->market()->getTime();
+    $result=$kraken->market()->time();
     print_r($result);
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
 
 try {
-    $result=$kraken->market()->getAssets();
+    $result=$kraken->market()->assets();
     print_r($result);
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
 
 try {
-    $result=$kraken->market()->getAssetPairs();
+    $result=$kraken->market()->assetPairs();
     print_r($result);
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
-} 
+}
 
 try {
-    $result=$kraken->market()->getDepth([
-        'pair'=>'ZUSDZJPY',
+    $result=$kraken->market()->depth([
+        'pair'=>'XXBTZUSD',
         'count'=>10,
     ]);
     print_r($result);

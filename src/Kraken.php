@@ -5,10 +5,10 @@
 
 namespace Lin\Kraken;
 
-
-
-use Lin\Kraken\Api\Account;
 use Lin\Kraken\Api\Market;
+use Lin\Kraken\Api\User;
+use Lin\Kraken\Api\UserTrade;
+use Lin\Kraken\Api\UserFunding;
 
 class Kraken
 {
@@ -42,18 +42,32 @@ class Kraken
     function setOptions(array $options=[]){
         $this->options=$options;
     }
-    
-    /**
-     * 
-     * */
-    function account(){
-        return new Account($this->init());
-    }
-    
+
     /**
      *
      * */
     function market(){
         return new Market($this->init());
+    }
+    
+    /**
+     *
+     * */
+    function user(){
+        return new User($this->init());
+    }
+    
+    /**
+     *
+     * */
+    function userFunding(){
+        return new UserFunding($this->init());
+    }
+    
+    /**
+     *
+     * */
+    function userTrade(){
+        return new UserTrade($this->init());
     }
 }

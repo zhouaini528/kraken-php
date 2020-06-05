@@ -12,7 +12,7 @@ class Market extends Request
     /**
      * https://api.kraken.com/0/public/Time
      * */
-    public function getTime(array $data=[]){
+    public function time(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Time';
         $this->data=$data;
@@ -22,7 +22,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/Assets
      * */
-    public function getAssets(array $data=[]){
+    public function assets(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Assets';
         $this->data=$data;
@@ -32,7 +32,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/AssetPairs
      * */
-    public function getAssetPairs(array $data=[]){
+    public function assetPairs(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/AssetPairs';
         $this->data=$data;
@@ -42,7 +42,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/Ticker
      * */
-    public function getTicker(array $data=[]){
+    public function ticker(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Ticker';
         $this->data=$data;
@@ -52,7 +52,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/OHLC
      * */
-    public function getOhlc(array $data=[]){
+    public function ohlc(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/OHLC';
         $this->data=$data;
@@ -62,7 +62,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/Depth 
      * */
-    public function getDepth(array $data=[]){
+    public function depth(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Depth';
         $this->data=$data;
@@ -72,7 +72,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/Trades 
      * */
-    public function getTrades(array $data=[]){
+    public function trades(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Trades';
         $this->data=$data;
@@ -82,7 +82,7 @@ class Market extends Request
     /**
      *https://api.kraken.com/0/public/Spread 
      * */
-    public function getSpread(array $data=[]){
+    public function spread(array $data=[]){
         $this->type='GET';
         $this->path='/0/public/Spread ';
         $this->data=$data;
