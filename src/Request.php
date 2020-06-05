@@ -36,7 +36,6 @@ class Request
     {
         $this->key=$data['key'] ?? '';
         $this->secret=$data['secret'] ?? '';
-        $this->passphrase = $data['passphrase'] ?? '';
         $this->host=$data['host'] ?? '';
         
         $this->options=$data['options'] ?? [];
@@ -59,16 +58,20 @@ class Request
      * 
      * */
     protected function nonce(){
-        $this->nonce=time()*1000;
+        $nonce = explode(' ', microtime());
+        $this->nonce = $nonce[1] . str_pad(substr($nonce[0], 2, 6), 6, '0');
     }
     
     /**
      * 
      * */
     protected function signature(){
-        $sort=$this->sort(array_merge(['accesskey'=>$this->key],$this->data));
-        $this->url=implode('&',$sort);
-        $this->signature = hash_hmac('md5',$this->url,sha1($this->secret));
+        if($this->type!='GET'){
+            $data=http_build_query($this->data, '', '&');
+            
+            $sign = hash_hmac('sha512', $this->path . hash('sha256', $this->nonce . $data, true), base64_decode($this->secret), true);
+            $this->signature=base64_encode($sign);
+        }
     }
     
     /**
@@ -77,24 +80,12 @@ class Request
     protected function headers(){
         $this->headers= [
             'Content-Type' => 'application/json',
-            'User-Agent'=>'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36',
         ];
-    }
-    
-    /**
-     * 
-     * */
-    protected function sort($param)
-    {
-        $u = [];
-        $sort_rank = [];
-        foreach ($param as $k => $v) {
-            $u[] = $k . "=" . urlencode($v);
-            $sort_rank[] = ord($k);
-        }
-        asort($u);
         
-        return $u;
+        if($this->type!='GET'){
+            $this->headers['API-Key']=$this->key;
+            $this->headers['API-Sign']=$this->signature;
+        }
     }
     
     /**
@@ -123,9 +114,11 @@ class Request
     protected function send(){
         $client = new \GuzzleHttp\Client();
         
-        $url=$this->host.$this->path.'?'.$this->url.'&sign='.$this->signature.'&reqTime='.$this->nonce;
+        $url=$this->host.$this->path;
         
-        $response = $client->request($this->type, $url, $this->options);
+        if($this->type=='GET') $url.='?'.http_build_query($this->data);
+        
+        $response = $client->request($this->type, $url , $this->options);
         
         return $response->getBody()->getContents();
     }
