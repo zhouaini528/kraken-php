@@ -32,6 +32,8 @@ ZB 文档地址 [https://www.zb.com/api](https://www.zb.com/api)
 
 [Bittrex](https://github.com/zhouaini528/bittrex-php)
 
+[Kraken](https://github.com/zhouaini528/kraken-php)
+
 #### 安装方式
 ```
 composer require linwj/zb
