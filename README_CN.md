@@ -58,3 +58,122 @@ $zb->setOptions([
     //'verify'=>false,
 ]);
 ```
+
+### 现货交易 API
+
+Market related API [More](https://github.com/zhouaini528/kraken-php/blob/master/tests/market.php)
+```php
+$kraken=new Kraken();
+
+try {
+    $result=$kraken->market()->time();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->market()->assets();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->market()->assetPairs();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->market()->depth([
+        'pair'=>'XXBTZUSD',
+        'count'=>10,
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+```
+
+Order related API [More](https://github.com/zhouaini528/kraken-php/blob/master/tests/user_trade.php)
+```php
+$kraken=new Kraken($key,$secret);
+
+//bargaining transaction
+try {
+    $result=$kraken->userTrade()->addOrder([
+        //'userref'=>'xxxxx'  //Custom ID
+        'pair' => 'XXBTZUSD',
+        'type' => 'buy',
+        'ordertype' => 'limit',
+        'price' => '7000',
+        'volume' => '1.123'
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+//track the order
+try {
+    $result=$kraken->user()->queryOrders([
+        //'userref'=>'xxxxx'  //Custom ID
+        'txid'=>'xxxxxx,xxxxxxx,xxxxxxx',
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+//cancellation of order
+try {
+    $result=$kraken->userTrade()->cancelOrder([
+        //'userref'=>'xxxxx'  //Custom ID
+        'txid'=>'xxxxxx,xxxxxxx,xxxxxxx',
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+```
+
+Accounts related API [More](https://github.com/zhouaini528/kraken-php/blob/master/tests/user.php)
+```php
+$kraken=new Kraken($key,$secret);
+
+try {
+    $result=$kraken->user()->balance();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->user()->tradeBalance();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->user()->openOrders();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+try {
+    $result=$kraken->user()->queryOrders();
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+```
+
+[更多用例](https://github.com/zhouaini528/kraken-php/tree/master/tests)
+
+[更多API](https://github.com/zhouaini528/kraken-php/tree/master/src/Api)
+
