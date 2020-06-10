@@ -29,13 +29,37 @@ $kraken->setOptions([
     //'verify'=>false,
 ]);
 
+//bargaining transaction
 try {
     $result=$kraken->userTrade()->addOrder([
+        //'userref'=>'xxxxx'  //Custom ID
         'pair' => 'XXBTZUSD',
         'type' => 'buy',
         'ordertype' => 'limit',
         'price' => '7000',
         'volume' => '1.123'
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+//track the order
+try {
+    $result=$kraken->user()->queryOrders([
+        //'userref'=>'xxxxx'  //Custom ID
+        'txid'=>'xxxxxx,xxxxxxx,xxxxxxx',
+    ]);
+    print_r($result);
+}catch (\Exception $e){
+    print_r(json_decode($e->getMessage(),true));
+}
+
+//cancellation of order
+try {
+    $result=$kraken->userTrade()->cancelOrder([
+        //'userref'=>'xxxxx'  //Custom ID
+        'txid'=>'xxxxxx,xxxxxxx,xxxxxxx',
     ]);
     print_r($result);
 }catch (\Exception $e){

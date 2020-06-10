@@ -80,7 +80,7 @@ class Request
      * */
     protected function headers(){
         $this->headers= [
-            'Content-Type' => 'application/json',
+            'Content-Type' =>'application/x-www-form-urlencoded'
         ];
         
         if($this->type!='GET'){
@@ -118,7 +118,7 @@ class Request
         $url=$this->host.$this->path;
         
         if($this->type=='GET') $url.='?'.http_build_query($this->data);
-        else $this->options['body']=json_encode(array_merge($this->data, ['nonce'=>$this->nonce]));
+        else $this->options['form_params']=array_merge($this->data, ['nonce'=>$this->nonce]);
         
         $response = $client->request($this->type, $url , $this->options);
         

@@ -30,33 +30,10 @@ $kraken->setOptions([
 ]);
 
 try {
-    $result=$kraken->user()->balance();
-    print_r($result);
-}catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
-}
-
-try {
-    $result=$kraken->user()->tradeBalance();
-    print_r($result);
-}catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
-}
-
-try {
-    $result=$kraken->user()->openOrders();
-    print_r($result);
-}catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
-}
-
-try {
-    $result=$kraken->user()->queryOrders();
+    $result=$kraken->userFunding()->depositAddresses();
     print_r($result);
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
 
 
-
-?>
