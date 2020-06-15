@@ -1,12 +1,12 @@
 ### 建议您先阅读官方文档
 
-ZB 文档地址 [https://www.zb.com/api](https://www.zb.com/api)
+Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
-所有接口方法的初始化都与ZB提供的方法相同。更多细节 [src/api](https://github.com/zhouaini528/zb-php/tree/master/src/Api)
+所有接口方法的初始化都与Kraken提供的方法相同。更多细节 [src/api](https://github.com/zhouaini528/kraken-php/tree/master/src/Api)
 
 大部分的接口已经完成，使用者可以根据我的设计方案继续扩展，欢迎与我一起迭代它。
 
-[English Document](https://github.com/zhouaini528/zb-php/blob/master/README.md)
+[English Document](https://github.com/zhouaini528/kraken-php/blob/master/README.md)
 
 ### 其他交易所API
 
