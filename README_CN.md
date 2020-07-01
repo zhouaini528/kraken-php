@@ -36,12 +36,12 @@ Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
 #### 安装方式
 ```
-composer require linwj/zb
+composer require linwj/kraken
 ```
 
 支持更多的请求设置
 ```php
-$zb=new Zb($key,$secret);
+$zb=new Kraken($key,$secret);
 
 //You can set special needs
 $zb->setOptions([
