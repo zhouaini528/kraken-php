@@ -34,6 +34,8 @@ Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
 [Kraken](https://github.com/zhouaini528/kraken-php)
 
+[Gate](https://github.com/zhouaini528/gate-php)
+
 #### 安装方式
 ```
 composer require linwj/kraken

@@ -34,6 +34,8 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Kraken](https://github.com/zhouaini528/kraken-php)
 
+[Gate](https://github.com/zhouaini528/gate-php)
+
 #### Installation
 ```
 composer require linwj/kraken
