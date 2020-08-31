@@ -38,6 +38,8 @@ Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
 [Bigone](https://github.com/zhouaini528/bigone-php)   
 
+[Crex24](https://github.com/zhouaini528/crex24-php)   
+
 #### 安装方式
 ```
 composer require linwj/kraken
@@ -75,21 +77,21 @@ try {
     $result=$kraken->market()->time();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
     $result=$kraken->market()->assets();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
     $result=$kraken->market()->assetPairs();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
@@ -99,7 +101,7 @@ try {
     ]);
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 ```
 
@@ -119,7 +121,7 @@ try {
     ]);
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 //track the order
@@ -130,7 +132,7 @@ try {
     ]);
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 //cancellation of order
@@ -141,7 +143,7 @@ try {
     ]);
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 ```
 
@@ -153,28 +155,28 @@ try {
     $result=$kraken->user()->balance();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
     $result=$kraken->user()->tradeBalance();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
     $result=$kraken->user()->openOrders();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 try {
     $result=$kraken->user()->queryOrders();
     print_r($result);
 }catch (\Exception $e){
-    print_r(json_decode($e->getMessage(),true));
+    print_r($e->getMessage());
 }
 
 ```
