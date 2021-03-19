@@ -12,13 +12,13 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Exchanges](https://github.com/zhouaini528/exchanges-php) It includes all of the following exchanges and is highly recommended.
 
-[Bitmex](https://github.com/zhouaini528/bitmex-php)
+[Bitmex](https://github.com/zhouaini528/bitmex-php) Support [Websocket](https://github.com/zhouaini528/bitmex-php/blob/master/README.md#Websocket)
 
-[Okex](https://github.com/zhouaini528/okex-php)
+[Okex](https://github.com/zhouaini528/okex-php) Support [Websocket](https://github.com/zhouaini528/okex-php/blob/master/README.md#Websocket)
 
-[Huobi](https://github.com/zhouaini528/huobi-php)
+[Huobi](https://github.com/zhouaini528/huobi-php) Support [Websocket](https://github.com/zhouaini528/huobi-php/blob/master/README.md#Websocket)
 
-[Binance](https://github.com/zhouaini528/binance-php)
+[Binance](https://github.com/zhouaini528/binance-php) Support [Websocket](https://github.com/zhouaini528/binance-php/blob/master/README.md#Websocket)
 
 [Kucoin](https://github.com/zhouaini528/kucoin-php)
 
@@ -26,7 +26,7 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Coinbase](https://github.com/zhouaini528/coinbase-php)
 
-[zb](https://github.com/zhouaini528/zb-php)
+[ZB](https://github.com/zhouaini528/zb-php)
 
 [Bitfinex](https://github.com/zhouaini528/bitfinex-php)
 
@@ -34,11 +34,19 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Kraken](https://github.com/zhouaini528/kraken-php)
 
-[Gate](https://github.com/zhouaini528/gate-php)
+[Gate](https://github.com/zhouaini528/gate-php)   
 
 [Bigone](https://github.com/zhouaini528/bigone-php)   
 
 [Crex24](https://github.com/zhouaini528/crex24-php)   
+
+[Bybit](https://github.com/zhouaini528/bybit-php)  
+
+[Coinbene](https://github.com/zhouaini528/coinbene-php)   
+
+[Bitget](https://github.com/zhouaini528/bitget-php)   
+
+[Poloniex](https://github.com/zhouaini528/poloniex-php)
 
 #### Installation
 ```

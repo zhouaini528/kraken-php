@@ -12,13 +12,13 @@ Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
 [Exchanges](https://github.com/zhouaini528/exchanges-php) 它包含以下所有交易所，强烈推荐使用该SDK。
 
-[Bitmex](https://github.com/zhouaini528/bitmex-php)
+[Bitmex](https://github.com/zhouaini528/bitmex-php) 支持[Websocket](https://github.com/zhouaini528/bitmex-php/blob/master/README_CN.md#Websocket)
 
-[Okex](https://github.com/zhouaini528/okex-php)
+[Okex](https://github.com/zhouaini528/okex-php) 支持[Websocket](https://github.com/zhouaini528/okex-php/blob/master/README_CN.md#Websocket)
 
-[Huobi](https://github.com/zhouaini528/huobi-php)
+[Huobi](https://github.com/zhouaini528/huobi-php) 支持[Websocket](https://github.com/zhouaini528/huobi-php/blob/master/README_CN.md#Websocket)
 
-[Binance](https://github.com/zhouaini528/binance-php)
+[Binance](https://github.com/zhouaini528/binance-php) 支持[Websocket](https://github.com/zhouaini528/binance-php/blob/master/README_CN.md#Websocket)
 
 [Kucoin](https://github.com/zhouaini528/kucoin-php)
 
@@ -34,11 +34,19 @@ Kraken 文档地址 [https://www.kraken.live/api](https://www.kraken.live/api)
 
 [Kraken](https://github.com/zhouaini528/kraken-php)
 
-[Gate](https://github.com/zhouaini528/gate-php)
+[Gate](https://github.com/zhouaini528/gate-php)   
 
 [Bigone](https://github.com/zhouaini528/bigone-php)   
 
 [Crex24](https://github.com/zhouaini528/crex24-php)   
+
+[Bybit](https://github.com/zhouaini528/bybit-php)  
+
+[Coinbene](https://github.com/zhouaini528/coinbene-php)   
+
+[Bitget](https://github.com/zhouaini528/bitget-php)   
+
+[Poloniex](https://github.com/zhouaini528/poloniex-php)
 
 #### 安装方式
 ```
